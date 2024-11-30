@@ -1,5 +1,9 @@
-import os
+import pytesseract
+from PIL import Image
+from icecream import ic
 
-if __name__=="__main__":
-  print(os.getcwd())
-  print(os.listdir("../.."))
+
+# Extraer texto desde una imagen PNG
+image = Image.open("/home/lean/Downloads/Documento escaneado-1.jpg")
+texto = pytesseract.image_to_string(image, lang="spa")
+ic(texto)
