@@ -1,5 +1,6 @@
 import re
 
+
 def extraer_palabras(texto):
     """Extrae todas las palabras del texto."""
     return re.findall(r"\b\w+\b", texto)
